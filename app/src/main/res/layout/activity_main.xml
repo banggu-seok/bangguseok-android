@@ -6,70 +6,57 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <Button
-        android:id="@+id/LoginButton"
-        android:layout_width="228dp"
-        android:layout_height="82dp"
-        android:text="Login"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.71"
-        tools:ignore="MissingConstraints" />
-
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/sttText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="HomeEdge"
-        android:textSize="48sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/LoginButton"
+        android:layout_marginTop="212dp"
+        android:text="버튼을 누르세요! 음성인식 결과가 표시됩니다."
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/findIdButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="아이디 찾기"
+    <ImageButton
+        android:id="@+id/sttStart"
+        android:layout_width="137dp"
+        android:layout_height="219dp"
+        android:adjustViewBounds="true"
+        android:padding="0sp"
+        android:scaleType="center"
+        android:src="@drawable/mic"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.265"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/LoginButton"
-        app:layout_constraintVertical_bias="0.088" />
+        app:layout_constraintTop_toBottomOf="@+id/sttText"
+        app:layout_constraintVertical_bias="0.527" />
 
     <TextView
-        android:id="@+id/findPwButton"
+        android:id="@+id/sttResult"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="비밀번호 찾기"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:ems="10"
+        android:gravity="center"
+        android:inputType="textPersonName"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/sttStart"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.051"
-        app:layout_constraintStart_toEndOf="@+id/findIdButton"
-        app:layout_constraintTop_toBottomOf="@+id/LoginButton"
-        app:layout_constraintVertical_bias="0.088"
+        app:layout_constraintHorizontal_bias="0.554"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sttText"
+        app:layout_constraintVertical_bias="0.503"
         tools:ignore="MissingConstraints" />
 
-    <TextView
-        android:id="@+id/signUpButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="회원가입"
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="60dp"
+        android:layout_height="56dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.163"
-        app:layout_constraintStart_toEndOf="@+id/findPwButton"
-        app:layout_constraintTop_toBottomOf="@+id/LoginButton"
-        app:layout_constraintVertical_bias="0.088"
-        tools:ignore="MissingConstraints" />
-
+        app:layout_constraintEnd_toStartOf="@+id/sttResult"
+        app:layout_constraintHorizontal_bias="0.845"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sttText"
+        app:layout_constraintVertical_bias="0.11"
+        app:srcCompat="@drawable/speaker" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
